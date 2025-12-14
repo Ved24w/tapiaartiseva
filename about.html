@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Tapi Mata Aarti</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+     <body>
+  <!-- NAVBAR -->
+ <nav class="navbar navbar-expand-lg navbar-orange">
+  <div class="container-fluid">
+    
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="image/logo.png" class="nav-logo me-2">
+      <span class="text-white fw-bold">Tapi Mata Aarti</span>
+    </a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="book-btn" href="donate.html">Book Aarti Slot</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+  <!-- (use same top bar + navbar include as index.html) -->
+  <!-- For brevity, copy the top-bar and navbar block from index.html here -->
+  <!-- ABOUT CONTENT -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="rounded shadow overflow-hidden">
+            <img src="image/pic.6.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="tag mt-3 bg-warning p-2 rounded">Since Ancient Times</div>
+        </div>
+        <div class="col-lg-6">
+          <span class="small badge bg-light text-warning">⭐ About Tapi Mata</span>
+          <h1 class="mt-3">A Sacred Connection to <span class="text-warning">River Tapi</span></h1>
+          <p class="text-muted">Tapi Mata Temple in Prakasha Village is a revered shrine dedicated to the goddess of the Tapi River...</p>
+          <ul class="list-unstyled mt-3">
+            <li class="d-flex mb-3"><div class="icon-round me-3">🌊</div><div><strong>Sacred Riverbank</strong><br><small class="text-muted">Pristine location</small></div></li>
+            <li class="d-flex mb-3"><div class="icon-round me-3">🔥</div><div><strong>Traditional Aarti</strong><br><small class="text-muted">Performed by priests</small></div></li>
+          </ul>
+          <a class="btn btn-warning" href="book.html">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-md-6">
+        <h2 class="section-title">
+          Swachata Abhiyan (Cleanliness Drive):<span>Seva for Serenity</span>
+        </h2>
+
+        <p class="section-text">
+          Tapi Mata Aarti is a sacred spiritual initiative conducted on the
+          banks of the holy Tapi River. Rooted in devotion, tradition, and
+          community service, the Aarti brings together devotees every week
+          to experience divine serenity through light, music, and prayer.
+        </p>
+
+        <p class="section-text">
+          Organized by dedicated sevaks and volunteers, the initiative also
+          focuses on cleanliness drives, cultural awareness, and social
+          upliftment—ensuring that spirituality and responsibility go hand
+          in hand.
+        </p>
+
+        <a href="donate.html" class="btn btn-warning section-btn">
+          Donate Now
+        </a>
+      </div>
+
+      <!-- RIGHT IMAGES -->
+      <div class="col-md-6">
+        <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner rounded">
+
+            <div class="carousel-item active">
+              <img src="image/swach.jpeg" class="d-block w-100" alt="Aarti Image">
+            </div>
+
+            <div class="carousel-item">
+              <img src="image/inviton.jpeg" class="d-block w-100" alt="Volunteers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="image/tp.pc.jpeg" class="d-block w-100" alt="River Aarti">
+            </div>
+
+          </div>
+
+          <!-- dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"></button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- LEFT IMAGE SLIDER -->
+      <div class="col-md-6">
+        <div id="aartiCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="image/quotes.jpeg" class="d-block w-100" alt="Aarti">
+            </div>
+            <div class="carousel-item">
+              <img src="image/q2.jpeg" class="d-block w-100" alt="Training">
+            </div>
+            <div class="carousel-item">
+              <img src="image/q3.jpeg" class="d-block w-100" alt="Devotion">
+            </div>
+          </div>
+
+          <!-- Dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#aartiCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#aartiCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#aartiCarousel" data-bs-slide-to="2"></button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col-md-6 ps-md-5">
+        <h2 class="section-title">
+          Aarti Training: <span>Learn the Art of Devotion</span>
+        </h2>
+
+        <p class="section-text">
+          Step into the divine rhythm of devotion! Our monthly aarti training
+          sessions welcome new members to learn the sacred practices of the aarti.
+        </p>
+
+        <p class="section-text">
+          From rituals to etiquettes, these sessions ensure the tradition thrives,
+          passing on its discipline and devotion to every new sevak.
+        </p>
+
+        <a href="contact.html" class="btn btn-warning section-btn">
+          Contact Us
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-md-6">
+        <h2 class="section-title">
+         Satsang:<span>Divine Connect</span>
+        </h2>
+
+        <p class="section-text">
+          Tapi Mata Aarti is a sacred spiritual initiative conducted on the
+          banks of the holy Tapi River. Rooted in devotion, tradition, and
+          community service, the Aarti brings together devotees every week
+          to experience divine serenity through light, music, and prayer.
+        </p>
+
+      </div>
+
+      <!-- RIGHT IMAGES -->
+      <div class="col-md-6">
+        <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner rounded">
+
+            <div class="carousel-item active">
+              <img src="image/inv4.jpeg" class="d-block w-100" alt="Aarti Image">
+            </div>
+
+            <div class="carousel-item">
+              <img src="image/inv3.jpeg" class="d-block w-100" alt="Volunteers">
+            </div>
+
+            <div class="carousel-item">
+              <img src="image/inv2.jpeg" class="d-block w-100" alt="River Aarti">
+            </div>
+
+          </div>
+
+          <!-- dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+<!-- FOOTER -->
+<footer class="footer-dark pt-5">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Address -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Address</h5>
+        <p>
+          Sangmeshwar Mahadev Mandir,<br>
+          Tapi Ghat Prakasha<br>
+          Maharashtra,India
+        </p>
+      </div>
+
+      <!-- Related Links -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Related Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="book.html">Booking</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Initiatives -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Initiatives</h5>
+        <ul class="footer-links">
+          <li>Swachata Abhiyan (Cleanliness Drive)</li>
+          <li>Educational Support for TapiAarti</li>
+          <li> Tapi Sevaks </li>
+          <li>Aarti Training</li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-md-3">
+        <div class="d-flex align-items-center mb-3">
+          <img src="image/logo.png" alt="logo" class="footer-logo me-2">
+          <h6 class="mb-0">श्री तापी माता आरती सेवा समिति प्रकाशा</h6>
+        </div>
+        <p>Subscribe to Our Newsletter & Stay Updated.</p>
+
+        <form>
+          <input type="email" class="form-control mb-2 footer-input"
+                 placeholder="Enter your Email Address">
+          <button class="btn btn-warning w-100">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <hr class="footer-line">
+
+    <!-- Bottom -->
+    <div class="row align-items-center pb-3">
+      <div class="col-md-6 text-md-start text-center">
+        © 2025 Tapiaartiseva.com. All rights reserved. | Built with devotion for Tapi Mata
+      </div>
+
+      <div class="col-md-6 text-md-end text-center footer-social">
+        <a href="#"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/tapi_aarti_prakasha_13?igsh=Y3RlZXlsZTZoYXdz"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="https://youtube.com/@tapiaartiprakasha?si=fCHuCA44ux8ywYgI"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.facebook.com/share/1Entf5eySt/"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- IMAGE MODAL (LIGHTBOX) -->
+  <div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <img id="modalImage" class="img-fluid rounded" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- CALENDAR MODAL -->
+  <div id="calendarModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0">
+          <h5>Select Aarti Date</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="date" id="aartiDate" class="form-control">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-warning" onclick="confirmBookingFromHome()">Confirm Booking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap + main JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us – Tapi Mata Aarti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="script" href ="server.js">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+<body>
+     <!-- NAVBAR -->
+ <nav class="navbar navbar-expand-lg navbar-orange">
+  <div class="container-fluid">
+    
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="image/logo.png" class="nav-logo me-2">
+      <span class="text-white fw-bold">Tapi Mata Aarti</span>
+    </a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="book-btn" href="donate.html">Book Aarti Slot</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<body class="bg-light">
+
+<section class="container py-5" id="donate">
+  <div class="card mx-auto p-4 shadow" style="max-width:500px;border-radius:15px;">
+    <h3 class="text-center mb-2">Donate for Tapi Mata Aarti</h3>
+    <p class="text-center text-muted">Your support keeps the aarti alive 🙏</p>
+
+    <input id="name" class="form-control mb-2" placeholder="Your Full Name">
+    <input id="mobile" class="form-control mb-2" placeholder="Mobile Number">
+    <input id="amount" class="form-control mb-3" placeholder="Donation Amount (₹)">
+
+    <button onclick="payNow()" class="btn btn-warning w-100 rounded-pill">
+      Donate Now
+    </button>
+  </div>
+</section>
+
+<script>
+function payNow() {
+  const name = document.getElementById("name").value;
+  const mobile = document.getElementById("mobile").value;
+  const amount = document.getElementById("amount").value;
+
+  if(!name || !mobile || !amount){
+    alert("Please fill all details");
+    return;
+  }
+
+  fetch("http://localhost:5000/create-order",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({amount,name,mobile})
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    var options = {
+      key: "RAZORPAY_LIVE_KEY",
+      amount: data.amount,
+      currency: "INR",
+      name: "Tapi Mata Aarti",
+      description: "Donation",
+      order_id: data.orderId,
+      handler: function (response){
+        window.location.href = `success.html?payment_id=${response.razorpay_payment_id}`;
+      },
+      prefill: { name, contact: mobile },
+      theme: { color: "#ff9800" }
+    };
+    new Razorpay(options).open();
+  });
+}
+</script>
+</body>
+</html>

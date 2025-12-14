@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery - Tapi Aarti</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+  <!-- NAVBAR -->
+ <nav class="navbar navbar-expand-lg navbar-orange">
+  <div class="container-fluid">
+    
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="image/logo.png" class="nav-logo me-2">
+      <span class="text-white fw-bold">Tapi Mata Aarti</span>
+    </a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="book-btn" href="donate.html">Book Aarti Slot</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+  <!-- include top-bar + navbar like index -->
+  <main class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2>Glimpses of <span class="text-warning">Divine Moments</span></h2>
+        <p class="text-muted">Click any image to view larger.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Replace src with your images -->
+        <div class="col-md-4"><div class="gallery-card" onclick="openImage('image/pic7.jpeg')"><img src="image/pic7.jpeg" class="img-fluid" alt=""><div class="overlay-text"><h5>Evening Aarti</h5></div></div></div>
+        <div class="col-md-4"><div class="gallery-card" onclick="openImage('image/pic.6.jpeg')"><img src="image/pic.6.jpeg" class="img-fluid" alt=""><div class="overlay-text"><h5>Tapi Mata</h5></div></div></div>
+        <div class="col-md-4"><div class="gallery-card" onclick="openImage('image/pic3.jpeg')"><img src="image/pic3.jpeg" class="img-fluid" alt=""><div class="overlay-text"><h5>Tapi Mata Samiti Prakasha</h5></div></div></div>
+        <!-- add more -->
+      </div>
+    </div>
+  </main>
+
+  <!-- image modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content bg-transparent border-0"><img id="modalImage" class="img-fluid rounded"></div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body></html>

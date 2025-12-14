@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tapi Mata Aarti - Prakasha</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+  <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919604304494" 
+   class="whatsapp-float" 
+   target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+  <!-- NAVBAR -->
+ <nav class="navbar navbar-expand-lg navbar-orange">
+  <div class="container-fluid">
+    
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="image/logo.png" class="nav-logo me-2">
+      <span class="text-white fw-bold">Tapi Mata Aarti</span>
+    </a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="book-btn" href="donate.html">Book Aarti Slot</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <header class="hero" style="background-image: url('image/pic5.0.jpg');">
+    <div class="overlay"></div>
+    <div class="container hero-content text-center text-white">
+      <span class="badge bg-warning text-dark">🕉 Tapi Mata Aarti, Prakasha Village</span>
+      <h1 class="display-4 mt-3">Experience the Divine <span class="highlight">Tapi Mata Aarti</span></h1>
+      <p class="lead mt-3">Join us every Sunday evening at <strong>6:00 PM</strong> at the sacred Tapi River.</p>
+
+      <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+        <a href="https://pages.razorpay.com/pl_Pi3eU6S91Mxclb/view"
+         class="btn btn-warning btn-lg"   target="_blank">📅 Book Your Aarti Slot Now</a>
+        <button class="btn btn-outline-light btn-lg" onclick="openLiveAarti()">▶ Watch Live Aarti</button>
+      </div>
+
+
+
+
+      <p class="mt-3 small opacity-75">✔ Instant booking • ✔ Instant confirmation • ✔ Community blessings</p>
+    </div>
+  </header>
+
+  <!-- WHY ATTEND -->
+  <section class="why-attend" id="aarti-section">
+  <h2>Why Attend <span>Tapi Mata Aarti</span>?</h2>
+  <p class="subtitle">
+    Experience divine aartis on the sacred banks of the Tapi River
+  </p>
+
+  <div class="card-container">
+
+    <a href="gallery.html" class="card-btn">
+      <div class="card">
+        <div class="icon">🪔</div>
+        <h3>Tapi Aarti</h3>
+        <p>Every Sunday<br>Evening 6:00 PM</p>
+      </div>
+    </a>
+
+    <a href="gallery.html" class="card-btn">
+      <div class="card">
+        <div class="icon">🌙</div>
+        <h3>Shayan Aarti</h3>
+        <p>Every Monday<br>Evening 6:00 PM</p>
+      </div>
+    </a>
+
+    <a href="gallery.html" class="card-btn">
+      <div class="card">
+        <div class="icon">🔥</div>
+        <h3>Bhasm Aarti</h3>
+        <p>Every Monday<br>Morning 4:00 AM</p>
+      </div>
+    </a>
+
+    <a href="donate.html" class="card-btn donate">
+      <div class="card">
+        <div class="icon">❤️</div>
+        <h3>Donate</h3>
+        <p>Your support keeps</br> The aarti alive 🙏</p>
+      
+         
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+  <!-- EVENING AARTI PROMO -->
+  <section class="aarti-promo text-center py-5">
+    <div class="container">
+      <div class="promo-box mx-auto">
+        <div class="om">ॐ</div>
+        <h3>Join Us This Sunday</h3>
+        <p class="text-white-70">Experience devotion and divine songs by the Tapi river.</p>
+        <div class="d-flex justify-content-center gap-3 mt-3">
+          <a class="btn btn-light btn-lg" href="Userdata/userslot.html">📅 View To Available Slot </a>
+          <a class="btn btn-outline-light btn-lg" href="donate.html">💝 Make a Donation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY PREVIEW -->
+  <section class="gallery-preview py-5">
+    <div class="container text-center">
+      <span class="tag">📸 Photo Gallery</span>
+      <h2>Glimpses of <span class="text-warning">Divine Moments</span></h2>
+      <p class="text-muted">A collection from past aartis and festivals.</p>
+
+      <div class="row g-4 mt-4">
+        <div class="col-md-4">
+          <div class="gallery-card" onclick="openImage('image/pic2.jpeg')">
+            <img src="image/pic2.jpeg" alt="" class="img-fluid">
+            <div class="overlay-text">
+              <h5>Evening Aarti</h5>
+              <p>Sacred ritual by the river</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gallery-card" onclick="openImage('image/pic4.jpeg')">
+            <img src="image/pic4.jpeg" alt="" class="img-fluid">
+            <div class="overlay-text">
+              <h5>Devotees Worship</h5>
+              <p>Moments of devotion</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gallery-card" onclick="openImage('image/pic7.jpeg')">
+            <img src="image/pic7.jpeg" alt="" class="img-fluid">
+            <div class="overlay-text">
+              <h5>River Lights</h5>
+              <p>Diya lamps on Tapi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="gallery.html" class="btn btn-warning mt-4">📸 View Full Gallery</a>
+    </div>
+  </section>
+  <section class="gallery-preview py-5">
+    <div class="container text-center">
+<section class="info-section">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <a href="donate.html" class="info-link">
+        <div class="info-box">
+            <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <h3>Make a Donation</h3>
+            <p>Support temple activities</p>
+        </div>
+    </a>
+
+    <a href="events.html" class="info-link">
+        <div class="info-box">
+            <div class="icon"><i class="fas fa-bell"></i></div>
+            <h3>Events & News</h3>
+            <p>Stay updated with latest</p>
+        </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/fq42KcH68Q6PddrA7" class="info-link" target="_blank">
+        <div class="info-box">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Visit Us</h3>
+            <p>Find location & directions</p>
+        </div>
+    </a>
+
+</section>
+
+
+
+<!-- HIDDEN CALENDAR POPUP -->
+<input type="date" id="calendarPopup" style="display:none;">
+
+<script src="script.js"></script>
+
+</body>
+</html>
+    </div>
+  </section>
+  <!-- FOOTER -->
+<footer class="footer-dark pt-5">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Address -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Address</h5>
+        <p>
+          Sangmeshwar Mahadev Mandir,<br>
+          Tapi Ghat Prakasha<br>
+          Maharashtra,India
+        </p>
+      </div>
+
+      <!-- Related Links -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Related Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="book.html">Booking</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Initiatives -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Initiatives</h5>
+        <ul class="footer-links">
+          <li>Swachata Abhiyan (Cleanliness Drive)</li>
+          <li>Educational Support for TapiAarti</li>
+          <li> Tapi Sevaks </li>
+          <li>Aarti Training</li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-md-3">
+        <div class="d-flex align-items-center mb-3">
+          <img src="image/logo.png" alt="logo" class="footer-logo me-2">
+          <h6 class="mb-0">श्री तापी माता आरती सेवा समिति प्रकाशा</h6>
+        </div>
+        <p>Subscribe to Our Newsletter & Stay Updated.</p>
+
+        <form>
+          <input type="email" class="form-control mb-2 footer-input"
+                 placeholder="Enter your Email Address">
+          <button class="btn btn-warning w-100">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <hr class="footer-line">
+
+    <!-- Bottom -->
+    <div class="row align-items-center pb-3">
+      <div class="col-md-6 text-md-start text-center">
+        © 2025 Tapiaartiseva.com. All rights reserved. | Built with devotion for Tapi Mata
+      </div>
+
+      <div class="col-md-6 text-md-end text-center footer-social">
+        <a href="#"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/tapi_aarti_prakasha_13?igsh=Y3RlZXlsZTZoYXdz"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="https://youtube.com/@tapiaartiprakasha?si=fCHuCA44ux8ywYgI"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.facebook.com/share/1Entf5eySt/"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- IMAGE MODAL (LIGHTBOX) -->
+  <div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <img id="modalImage" class="img-fluid rounded" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- CALENDAR MODAL -->
+  <div id="calendarModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0">
+          <h5>Select Aarti Date</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="date" id="aartiDate" class="form-control">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-warning" onclick="confirmBookingFromHome()">Confirm Booking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap + main JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
