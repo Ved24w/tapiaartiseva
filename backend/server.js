@@ -1,4 +1,51 @@
 const express = require("express");
+const fs = require("fs");
+const cors = require("cors");
+
+const app = express();
+const PORT = 5000;
+
+app.use(cors(5000));
+app.use(express.json());
+
+const DATA_FILE = "./bookings.json";
+
+/* Helper: Read bookings */
+const readBookings = () => {
+  if (!fs.existsSync(DATA_FILE)) return [];
+  return JSON.parse(fs.readFileSync(DATA_FILE));
+};
+
+/* Helper: Save booking */
+const saveBooking = (booking) => {
+  const bookings = readBookings();
+  bookings.push(booking);
+  fs.writeFileSync(DATA_FILE, JSON.stringify(bookings, null, 2));
+};
+
+/* Create Booking */
+app.post("/api/book", (req, res) => {
+  const booking = {
+    id: Date.now(),
+    ...req.body,
+    createdAt: new Date().toISOString()
+  };
+
+  saveBooking(booking);
+  res.json({ success: true, booking });
+});
+
+/* Get All Bookings (Admin) */
+app.get("/api/bookings", (req, res) => {
+  res.json(readBookings());
+});
+
+app.listen(PORT, () => {
+  console.log(`Backend running at http://localhost:${PORT}`);
+});
+
+
+const express = require("express");
 const Razorpay = require("razorpay");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");

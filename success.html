@@ -19,3 +19,16 @@
 </div>
 </body>
 </html>
+<h2>Booking Confirmed 🙏</h2>
+<div id="summary"></div>
+
+<script>
+  const booking = JSON.parse(localStorage.getItem("booking"));
+  document.getElementById("summary").innerHTML = `
+    <p><b>Aarti:</b> ${booking.aarti}</p>
+    <p><b>Date:</b> ${booking.date}</p>
+    <p><b>Time:</b> ${booking.time}</p>
+    <p><b>Persons:</b> ${booking.persons}</p>
+    <p><b>Amount:</b> ₹${booking.amount}</p>
+  `;
+</script>
